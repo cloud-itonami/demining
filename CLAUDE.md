@@ -19,7 +19,7 @@ Humanitarian Mine Action (HMA) platform — detection, survey, clearance, land r
 
 The authoritative technical taxonomy for this domain is **IMAS (International Mine Action Standards)** maintained by UNMAS / GICHD — not UNSPSC/CPC. UNSPSC/CPC are included for procurement/statistics crosswalk only.
 
-See `legalInstruments.jsonld` for global legal layer (3 multilateral treaties + 5 regional instruments + 34 national implementation statutes across 33 jurisdictions, incl. non-party heavy users US/RU/CN/IN/KR and heavily-contaminated states AF/CO/KH/LA/UA/IQ/BA/HR).
+See `legalInstruments.jsonld` for global legal layer (7 multilateral instruments + 5 regional instruments + 41 national implementation statutes across 31 jurisdictions, incl. non-party heavy users US/RU/CN/KR and heavily-contaminated states AF/CO/KH/LA/UA/IQ/BA/HR). Counts verified against the file 2026-08-13; the previous "3 / 34 / 33, incl. IN" was stale on every figure and India is not in the corpus. Note that `multilateralTreaties` also holds the ICRC Customary IHL Study and UNSC mine-action resolutions, which are not treaties, and that only 2 of the 41 statutes are `verified: true` — see the file's own `verificationNote`.
 
 See `classifications.jsonld` for:
 - IMAS series → activity mapping
