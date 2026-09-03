@@ -70,9 +70,10 @@ exit 2.
 
 ## What you cannot do here, and why
 
-**You cannot run or deploy the appview.** `wrangler.jsonc` points `main` at
-`svelte/.svelte-kit/cloudflare/_worker.js`, a SvelteKit build output that is not committed
-and has never been built in this tree — `svelte/.svelte-kit/` does not exist. The `routes`
+**You cannot deploy the appview.** `wrangler.jsonc` points `main` at `./src/app.ts`
+(since the svelte→cljs migration of 2026-09-03) and serves static assets from
+`web/dist` — build them with `npm install && npx shadow-cljs compile app` at the
+repository root (Build completed, 0 errors, ~11s). But the `routes`
 block naming `demining.etzhayyim.com` and `dm1nactz.etzhayyim.com` states intent; as of
 2026-08-13 both hostnames are **NXDOMAIN**, so there is no live Worker to compare against
 either.
