@@ -1,0 +1,12 @@
+{
+  "name": "demining",
+  "version": "1.0.0",
+  "description": "Humanitarian Mine Action appview UI — NTS/TS/clearance/Land Release/EORE/victim assistance (IMAS conformant) (shadow-cljs + reagent + kotoba-ui)",
+  "main": "index.js",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
