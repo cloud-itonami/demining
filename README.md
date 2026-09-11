@@ -39,7 +39,7 @@ a polygon is demoted to Tier 1 only on a Land Release decision. See `CLAUDE.md`.
 | `classifications.jsonld` | IMAS ↔ UNSPSC / CPC v2.1 / ISIC / HS2022 crosswalk, EO item taxonomy | 15 IMAS series entries |
 | `legalInstruments.jsonld` | The legal layer | 7 multilateral instruments, 5 regional, 41 national statutes across 31 jurisdictions |
 | `crawlSeeds.jsonld` | Ingest seed contract | 5 groups, 39 seeds |
-| `appview/demining-ui-dm1nactz/` | Thin edge facade (Cloudflare Worker `src/app.ts` + appview UI, migrated from SvelteKit to shadow-cljs + reagent + kotoba-ui on 2026-09-03) | `src/app.ts`, 81 lines; `src/cloud_itonami/demining/*.cljs`; `npx shadow-cljs compile app` → Build completed, 0 errors |
+| `appview/demining-ui-dm1nactz/` | Thin edge facade (Cloudflare Worker `src/app.ts` + appview UI, migrated from SvelteKit to shadow-cljs + reagent + kotoba-ui on 2026-09-03) | `src/app.ts`, 81 lines; `src/cloud_itonami/demining/*.cljs`; `amu compile --target wasm32-browser app` → Build completed, 0 errors |
 | `CLAUDE.md` | Agent-facing design record: tiering, planned actors, planned lexicons, graph schema | — |
 | `migration.edn` / `README.edn` | Extraction provenance from `etzhayyim/root` | — |
 
@@ -56,7 +56,7 @@ citable legal authority.** For binding use, cite the primary sources it names.
 Verified 2026-08-13: `demining.etzhayyim.com` and `dm1nactz.etzhayyim.com` are both
 **NXDOMAIN**. No Worker is serving. The former SvelteKit shell was removed in the
 svelte→cljs migration (2026-09-03); the UI now builds with
-`npx shadow-cljs compile app` into `web/dist`. The `routes` block in `wrangler.jsonc`
+`amu compile --target wasm32-browser app` into `web/dist`. The `routes` block in `wrangler.jsonc`
 is intent, not
 current state.
 

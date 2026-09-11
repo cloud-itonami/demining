@@ -72,7 +72,7 @@ exit 2.
 
 **You cannot deploy the appview.** `wrangler.jsonc` points `main` at `./src/app.ts`
 (since the svelte→cljs migration of 2026-09-03) and serves static assets from
-`web/dist` — build them with `npm install && npx shadow-cljs compile app` at the
+`web/dist` — build them with `npm install && amu compile --target wasm32-browser app` at the
 repository root (Build completed, 0 errors, ~11s). But the `routes`
 block naming `demining.etzhayyim.com` and `dm1nactz.etzhayyim.com` states intent; as of
 2026-08-13 both hostnames are **NXDOMAIN**, so there is no live Worker to compare against
