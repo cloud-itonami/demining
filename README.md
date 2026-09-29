@@ -29,7 +29,7 @@ payload so the boundary travels with the deployed artifact.
 is public and federable. Publishing the coordinates of an *uncleared* hazardous area
 endangers civilians (IMAS 05.10). Uncleared SHA/CHA polygons, exact detector hit
 coordinates, victim PII, and operator PII are Tier 3 and never enter the public record;
-a polygon is demoted to Tier 1 only on a Land Release decision. See `CLAUDE.md`.
+a polygon is demoted to Tier 1 only on a Land Release decision. See `AGENTS.md`.
 
 ## What is actually in this repository
 
@@ -40,7 +40,7 @@ a polygon is demoted to Tier 1 only on a Land Release decision. See `CLAUDE.md`.
 | `legalInstruments.jsonld` | The legal layer | 7 multilateral instruments, 5 regional, 41 national statutes across 31 jurisdictions |
 | `crawlSeeds.jsonld` | Ingest seed contract | 5 groups, 39 seeds |
 | `appview/demining-ui-dm1nactz/` | Thin edge facade (Cloudflare Worker `src/app.ts` + appview UI, migrated from SvelteKit to shadow-cljs + reagent + kotoba-ui on 2026-09-03) | `src/app.ts`, 81 lines; `src/cloud_itonami/demining/*.cljs`; `amu compile --target wasm32-browser app` → Build completed, 0 errors |
-| `CLAUDE.md` | Agent-facing design record: tiering, planned actors, planned lexicons, graph schema | — |
+| `AGENTS.md` | Agent-facing design record: tiering, planned actors, planned lexicons, graph schema | — |
 | `migration.edn` / `README.edn` | Extraction provenance from `etzhayyim/root` | — |
 
 Two cautions on `legalInstruments.jsonld`. Its `multilateralTreaties` array is 7 entries
@@ -64,11 +64,11 @@ current state.
 it answers `/health`, and forwards `com.etzhayyim.apps.demining.*` XRPC calls to a
 dispatcher. The rules it fronts live elsewhere — the Kotodama Python ingest module, BPMN
 contracts, and lexicon definitions under `etzhayyim/root`, as recorded in the `/health`
-payload and in `CLAUDE.md`. Reading only this repo will not show you the clearance logic,
+payload and in `AGENTS.md`. Reading only this repo will not show you the clearance logic,
 because the clearance logic was never here.
 
-The lexicons, actor DIDs, and graph schema in `CLAUDE.md` are **planned**, not built. The
-nanoid is the one open contradiction: `CLAUDE.md` still says `TBD`, while `wrangler.jsonc`
+The lexicons, actor DIDs, and graph schema in `AGENTS.md` are **planned**, not built. The
+nanoid is the one open contradiction: `AGENTS.md` still says `TBD`, while `wrangler.jsonc`
 and `app.ts` already carry `dm1nactz`.
 
 ## Getting started

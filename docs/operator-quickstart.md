@@ -87,8 +87,8 @@ dispatcher — the Kotodama Python ingest module and the BPMN contracts under
 `etzhayyim/root`, both named in the `/health` payload. A test here could only prove the
 proxy forwards; it could not prove any mine-action rule is correct.
 
-**The lexicons, actor DIDs, and graph schema in `CLAUDE.md` are planned, not built.** Treat
-that file as a design record. One contradiction is known and unresolved: `CLAUDE.md` lists
+**The lexicons, actor DIDs, and graph schema in `AGENTS.md` are planned, not built.** Treat
+that file as a design record. One contradiction is known and unresolved: `AGENTS.md` lists
 the nanoid as `TBD`, while `wrangler.jsonc` and `app.ts` already use `dm1nactz`.
 
 ## Before you add anything
@@ -97,7 +97,7 @@ the nanoid as `TBD`, while `wrangler.jsonc` and `app.ts` already use `dm1nactz`.
 anti-personnel mines, along with offensive EOD and real-time targeting. That exclusion is
 treaty and statute law, not a style preference — see `README.md` for the instruments.
 
-The sensitivity tiering in `CLAUDE.md` is a safety control. Uncleared SHA/CHA polygons,
+The sensitivity tiering in `AGENTS.md` is a safety control. Uncleared SHA/CHA polygons,
 exact detector hit coordinates, and victim or operator PII are Tier 3 and must not reach a
 public AT Protocol record; a polygon may be demoted to Tier 1 only by a Land Release
 decision under IMAS 07.11. Adding a field that carries a coordinate into a Tier 1 record is
